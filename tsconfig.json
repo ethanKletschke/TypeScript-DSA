@@ -1,0 +1,15 @@
+{
+  "include": ["src", "test"],
+  "compilerOptions": {
+    "target": "es2022",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "outDir": "./dist",
+    "noImplicitOverride": true,
+    "rewriteRelativeImportExtensions": true,
+    "types": ["node", "mocha"]
+  }
+}

@@ -1,0 +1,30 @@
+project-meta:
+  project-name: TypeScript DSA
+  date-started: 2026-03-22
+  last-updated: 2026-03-22
+  languages:
+    - TypeScript
+  package-manager: npm
+  status: Experimental
+  license: MIT
+  version: 0.0.1
+
+build:
+  dev-environments:
+    - Ubuntu (WSL2)
+  test-environments:
+    - Ubuntu (WSL2)
+  target-platforms:
+    - Linux
+    - Windows 10
+    - Windows 11
+  compiler:
+    compiler-name: tsc
+    compiler-version: 5.9.3
+
+team:
+  author: Ethan Kletschke
+  contributors:
+    - name: Ethan Kletschke
+      role: Author and Owner
+      github-username: ethanKletschke
