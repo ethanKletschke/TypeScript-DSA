@@ -11,5 +11,7 @@
     "noImplicitOverride": true,
     "rewriteRelativeImportExtensions": true,
     "types": ["node", "mocha"]
+    "rootDir": "./",
+    "moduleResolution": "node",
   }
 }
