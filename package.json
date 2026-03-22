@@ -17,6 +17,7 @@
     "@types/node": "^25.5.0",
     "mocha": "^11.7.5",
     "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.9.3"
   }
 }
