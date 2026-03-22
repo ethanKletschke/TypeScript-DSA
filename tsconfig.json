@@ -2,6 +2,7 @@
   "include": ["src", "test"],
   "compilerOptions": {
     "target": "es2022",
+    "lib": ["ES2022"],
     "module": "commonjs",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
@@ -10,8 +11,12 @@
     "outDir": "./dist",
     "noImplicitOverride": true,
     "rewriteRelativeImportExtensions": true,
-    "types": ["node", "mocha"]
     "rootDir": "./",
+    "types": ["node", "mocha"],
     "moduleResolution": "node",
+    "baseUrl": "./",
+    "paths": {
+      "@": ["src/*"]
+    }
   }
 }
