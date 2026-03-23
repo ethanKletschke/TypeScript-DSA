@@ -11,6 +11,7 @@ export default abstract class Collection<T> {
   abstract add(item: T): void;
   abstract clear(): void;
   abstract peek(): T | undefined;
+  abstract toString(): string;
 
   isEmpty(): boolean {
     return this.length === 0;
