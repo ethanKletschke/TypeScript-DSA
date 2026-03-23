@@ -12,7 +12,7 @@
     "noImplicitOverride": true,
     "rewriteRelativeImportExtensions": true,
     "rootDir": "./",
-    "types": ["node", "mocha"],
+    "types": ["node", "mocha", "chai"],
     "moduleResolution": "node",
     "baseUrl": "./",
     "paths": {
