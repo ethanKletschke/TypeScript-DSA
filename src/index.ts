@@ -1,3 +1,5 @@
-// TODO -> Add imports
+import Collection from "@/data-structs/collection/Collection";
 
-// TODO -> Add export statement
+export {
+  Collection
+};
