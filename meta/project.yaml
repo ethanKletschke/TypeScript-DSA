@@ -7,7 +7,7 @@ project-meta:
   package-manager: npm
   status: Experimental
   license: MIT
-  version: 0.0.2 # TODO -> Update version number
+  version: 0.0.3 # TODO -> Update version number
 
 build:
   dev-environments:
