@@ -2,7 +2,7 @@
  *
  */
 export default abstract class Collection<T> {
-  abstract length: number;
+  abstract get length(): number;
   abstract pop(): T;
   abstract clear(): void;
   abstract peek(): T | undefined;
