@@ -3,9 +3,6 @@ import Collection from "./Collection";
 /**
  * A last in first out (LIFO) data stucture where
  * items are both added and removed from the top.
- *
- * @remarks
- * The `Stack` class
  */
 export default class Stack<T> extends Collection<T> {
   private items: T[];
