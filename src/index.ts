@@ -1,4 +1,4 @@
-import Collection from "@/data-structs/collection/Collection";
+import Collection from "@/data-structs/Collection";
 
 export {
   Collection
