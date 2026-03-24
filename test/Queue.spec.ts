@@ -61,4 +61,19 @@ describe("Queue", function () {
       expect(q.peek()).to.equal(42, "peek() did not return the 1st item");
     });
   });
+
+  describe("remove()", function() {
+    it("Removes from the front of the queue", function () {
+      const q = new Queue<number>();
+
+      q.add(1);
+      q.add(2);
+      q.add(3);
+
+      const removed = q.remove();
+
+      expect(q.peek()).to.equal(2, "Queue did not remove from the front (index 0).");
+      expect(removed).to.equal(1, "Queue did not properly return the removed item.");
+    });
+  });
 });
