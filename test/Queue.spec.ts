@@ -6,13 +6,13 @@ describe("Queue", function () {
     it("Creates an instance of the Queue class", function () {
       const q = new Queue();
 
-      expect(q).to.be.an.instanceOf(Queue, "Did not create a queue");
+      expect(q).to.be.an.instanceOf(Queue, "Did not create a queue.");
     });
 
     it("Properly inherits from the Collection abstract class", function () {
       const q = new Queue();
 
-      expect(q).to.be.an.instanceOf(Collection, "Did not inherit from Collection");
+      expect(q).to.be.an.instanceOf(Collection, "Did not inherit from Collection.");
     });
   });
 
@@ -26,6 +26,17 @@ describe("Queue", function () {
       q.add(4);
 
       expect(q.length).to.not.equals(0, "Items not added.");
+    });
+  });
+
+  describe("length() getter", function() {
+    it("Returns the length of the queue", function () {
+      const q = new Queue<string>();
+
+      q.add("Item 1");
+      q.add("Item 2");
+
+      expect(q.length).to.equal(2, "Length not returned correctly.");
     });
   });
 });
