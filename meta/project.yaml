@@ -4,6 +4,9 @@ project-meta:
   last-updated: 2026-03-24 # TODO -> Update "last-updated"
   languages:
     - TypeScript
+  frameworks:
+    - Mocha
+    - Chai
   package-manager: npm
   status: Experimental
   license: MIT
