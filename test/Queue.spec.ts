@@ -39,4 +39,16 @@ describe("Queue", function () {
       expect(q.length).to.equal(2, "Length not returned correctly.");
     });
   });
+
+  describe("isEmpty()", function() {
+    it("Correctly determines if the queue is empty", function () {
+      const fullQ = new Queue<string>();
+      const emptyQ = new Queue();
+
+      fullQ.add("Not Empty :)");
+
+      expect(fullQ.isEmpty(), "fullQ incorrectly determined to be empty").to.be.false;
+      expect(emptyQ.isEmpty(), "emptyQ incorrectly determined to be not empty.").to.be.true;
+    });
+  });
 });
