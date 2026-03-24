@@ -17,7 +17,7 @@ describe("Queue", function () {
   });
 
   describe("add()", function () {
-    it("Adds items to the queue", function () {
+    it("Adds individual items to the queue", function () {
       const q = new Queue<number>();
 
       q.add(1);
