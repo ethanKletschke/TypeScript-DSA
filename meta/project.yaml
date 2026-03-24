@@ -1,13 +1,13 @@
 project-meta:
   project-name: TypeScript DSA
   date-started: 2026-03-22
-  last-updated: 2026-03-23 # TODO -> Update "last-updated"
+  last-updated: 2026-03-24 # TODO -> Update "last-updated"
   languages:
     - TypeScript
   package-manager: npm
   status: Experimental
   license: MIT
-  version: 0.0.3 # TODO -> Update version number
+  version: 0.0.4 # TODO -> Update version number
 
 build:
   dev-environments:
