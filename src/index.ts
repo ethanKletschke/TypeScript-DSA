@@ -1,7 +1,7 @@
-import Collection from "@/data-structs/Collection";
-import Stack from "./data-structs/Stack";
+import { Stack, Queue, Collection } from "./data-structs/index";
 
 export {
   Collection,
-  Stack
+  Stack,
+  Queue
 };
