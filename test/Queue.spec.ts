@@ -15,4 +15,17 @@ describe("Queue", function () {
       expect(q).to.be.an.instanceOf(Collection, "Did not inherit from Collection");
     });
   });
+
+  describe("add()", function () {
+    it("Adds items to the queue", function () {
+      const q = new Queue<number>();
+
+      q.add(1);
+      q.add(2);
+      q.add(3);
+      q.add(4);
+
+      expect(q.length).to.not.equals(0, "Items not added.");
+    });
+  });
 });
