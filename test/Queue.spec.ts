@@ -16,6 +16,17 @@ describe("Queue", function () {
     });
   });
 
+  describe("length() getter", function() {
+    it("Returns the length of the queue", function () {
+      const q = new Queue<string>();
+
+      q.add("Item 1");
+      q.add("Item 2");
+
+      expect(q.length).to.equal(2, "Length not returned correctly.");
+    });
+  });
+
   describe("add()", function () {
     it("Adds individual items to the queue", function () {
       const q = new Queue<number>();
@@ -26,17 +37,6 @@ describe("Queue", function () {
       q.add(4);
 
       expect(q.length).to.not.equals(0, "Items not added.");
-    });
-  });
-
-  describe("length() getter", function() {
-    it("Returns the length of the queue", function () {
-      const q = new Queue<string>();
-
-      q.add("Item 1");
-      q.add("Item 2");
-
-      expect(q.length).to.equal(2, "Length not returned correctly.");
     });
   });
 
