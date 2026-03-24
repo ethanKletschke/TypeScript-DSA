@@ -51,4 +51,14 @@ describe("Queue", function () {
       expect(emptyQ.isEmpty(), "emptyQ incorrectly determined to be not empty.").to.be.true;
     });
   });
+
+  describe("peek()", function() {
+    it("Returns the first item added.", function () {
+      const q = new Queue<number>();
+
+      q.add(42);
+
+      expect(q.peek()).to.equal(42, "peek() did not return the 1st item");
+    });
+  });
 });
