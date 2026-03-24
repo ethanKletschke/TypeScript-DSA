@@ -8,6 +8,10 @@ import Collection from "./Collection";
 export default class Queue<T> extends Collection<T> {
   private items: T[];
 
+  get length() {
+    return this.items.length;
+  }
+
   constructor() {
     super();
     this.items = [];
@@ -21,4 +25,15 @@ export default class Queue<T> extends Collection<T> {
     return this.items.shift(); // Dequeue from front
   }
 
+  override peek(): T | undefined {
+    return this.items[0];
+  }
+
+  override clear(): void {
+    this.items = [];
+  }
+
+  override toString(): string {
+    return ""; // TODO -> Implement toString()
+  }
 }
