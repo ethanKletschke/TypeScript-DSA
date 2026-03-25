@@ -94,10 +94,16 @@ describe("Queue", function () {
     });
   });
 
-  // TODO -> Implement queue toString() test
-  describe.skip("toString()", function() {
+  describe("toString()", function() {
     it("Returns a correctly formatted string representation", function () {
-      // TODO -> finish test
+      const q = new Queue<number>();
+
+      q.add(1);
+      q.add(2);
+      q.add(3);
+      q.add(4);
+
+      expect(q.toString()).to.equal("[ 1, 2, 3, 4 ]", "toString() output not correctly formatted");
     });
   });
 });
