@@ -34,6 +34,14 @@ export default class Queue<T> extends Collection<T> {
   }
 
   override toString(): string {
-    return ""; // TODO -> Implement toString()
+    let x: string = "[";
+
+    for (const item of this.items) {
+      x += `${item}, `;
+    }
+
+    x += " ]";
+
+    return x;
   }
 }
