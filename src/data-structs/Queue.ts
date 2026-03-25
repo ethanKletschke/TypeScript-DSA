@@ -21,6 +21,11 @@ export default class Queue<T> extends Collection<T> {
     this.items.push(item);
   }
 
+  override addItems(...items: T[]): void {
+    // De-spread the item params and push them to the queue
+    this.items.push(...items);
+  }
+
   override remove(): T | undefined {
     return this.items.shift(); // Dequeue from front
   }
