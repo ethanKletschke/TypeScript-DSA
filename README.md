@@ -1,12 +1,21 @@
-# ts-DSA
+# TS-DSA
 
 A TypeScript DSA library.
+
+[![Mocha Testing](https://github.com/ethanKletschke/TypeScript-DSA/actions/workflows/MochaTesting.yml/badge.svg)](https://github.com/ethanKletschke/TypeScript-DSA/actions/workflows/MochaTesting.yml)
 
 - Author: Ethan Kletschke
 - Version: `0.0.4` <!-- TODO => Update version number -->
 - Developed on: Ubuntu (WSL2)
 - License: MIT
 - Project metadata: [`project.yaml`](meta/project.yaml)
+
+---
+
+- [TS-DSA](#ts-dsa)
+  - [Planned Features](#planned-features)
+
+---
 
 ## Planned Features
 
