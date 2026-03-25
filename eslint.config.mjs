@@ -10,10 +10,10 @@ export default [
       parser: tseslint.parser,
     },
     rules: {
+      "@/semi": "error",
       "@typescript-eslint/no-unused-vars": "warn",
       "@typescript-eslint/no-explicit-any": "warn",
       "@typescript-eslint/explicit-function-return-type": "off",
-
     }
   },
   {

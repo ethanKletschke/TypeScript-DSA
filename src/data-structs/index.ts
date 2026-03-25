@@ -6,4 +6,4 @@ export {
   Collection,
   Stack,
   Queue
-}
+};
