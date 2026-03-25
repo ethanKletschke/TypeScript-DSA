@@ -34,14 +34,24 @@ export default class Queue<T> extends Collection<T> {
   }
 
   override toString(): string {
-    let x: string = "[";
+    let str: string = "[ ";
 
     for (const item of this.items) {
-      x += `${item}, `;
+      // If the loop reached the last item
+      if (item === this.items[this.items.length - 1]) {
+        // Do not append a comma and a space
+        str += `${item}`;
+        // End the loop
+        break;
+      }
+
+      str += `${item}, `;
     }
 
-    x += " ]";
+    // Close square bracket
+    str += " ]";
 
-    return x;
+    // Return the string representation
+    return str;
   }
 }
