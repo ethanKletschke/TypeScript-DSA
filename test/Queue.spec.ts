@@ -76,4 +76,28 @@ describe("Queue", function () {
       expect(removed).to.equal(1, "Queue did not properly return the removed item.");
     });
   });
+
+  describe("clear()", function() {
+    it("Fully clears the queue", function () {
+      const q = new Queue<number>();
+
+      q.add(0);
+      q.add(0);
+      q.add(0);
+      q.add(0);
+      q.add(0);
+
+      q.clear();
+
+      expect(q.peek(), "Peeked an existing element after clearing queue.").to.be.undefined;
+      expect(q.length).to.equal(0, "Queue not empty.");
+    });
+  });
+
+  // TODO -> Implement queue toString() test
+  describe.skip("toString()", function() {
+    it("Returns a correctly formatted string representation", function () {
+      // TODO -> finish test
+    });
+  });
 });
