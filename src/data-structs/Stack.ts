@@ -40,6 +40,24 @@ export default class Stack<T> extends Collection<T> {
   }
 
   override toString(): string {
-    return ""; // TODO -> Implement toString()
+    let str: string = "[ ";
+
+    for (const item of this.items) {
+      // If the loop reached the last item
+      if (item === this.items[this.items.length - 1]) {
+        // Do not append a comma and a space
+        str += `${item}`;
+        // End the loop
+        break;
+      }
+
+      str += `${item}, `;
+    }
+
+    // Close square bracket
+    str += " ]";
+
+    // Return the string representation
+    return str;
   }
 }
