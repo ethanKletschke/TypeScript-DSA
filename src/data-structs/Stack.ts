@@ -8,7 +8,9 @@ export default class Stack<T> extends Collection<T> {
   private items: T[];
 
   constructor() {
+    // Run the "Collection" constructor
     super();
+    // Initialise the stack's items
     this.items = [];
   }
 
