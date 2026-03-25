@@ -24,6 +24,11 @@ export default class Stack<T> extends Collection<T> {
     this.items.push(item);
   }
 
+  override addItems(...items: T[]): void {
+    // De-spread the item params and push them to the stack
+    this.items.push(...items);
+  }
+
   override clear(): void {
     this.items = [];
   }
