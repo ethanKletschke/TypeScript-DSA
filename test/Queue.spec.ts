@@ -16,7 +16,7 @@ describe("Queue", function () {
     });
   });
 
-  describe("length() getter", function() {
+  describe("get length()", function() {
     it("Returns the length of the queue", function () {
       const q = new Queue<string>();
 
