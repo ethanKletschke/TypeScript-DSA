@@ -39,6 +39,7 @@ export class Stack<T> extends Collection<T> {
     return this.items[this.items.length - 1];
   }
 
+  // TODO -> Account for string stacks
   override toString(): string {
     let str: string = "[ ";
 

@@ -41,6 +41,7 @@ export class Queue<T> extends Collection<T> {
   override toString(): string {
     let str: string = "[ ";
 
+    // TODO -> Account for string queues
     for (const item of this.items) {
       // If the loop reached the last item
       if (item === this.items[this.items.length - 1]) {

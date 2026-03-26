@@ -74,4 +74,26 @@ describe("Stack", function () {
       expect(res).to.equal(4, "Wrong item was removed from the stack.");
     });
   });
+
+  describe("clear()", function () {
+    it("Fully clears the stack", function () {
+      const s = new Stack<number>();
+
+      s.addItems(1, 2, 3, 4, 5);
+      s.clear();
+
+      expect(s.length).to.equal(0, "Length must be zero after clearing.");
+      expect(s.peek(), "Stack should be empty.").to.be.undefined;
+    });
+  });
+
+  describe("toString()", function () {
+    it("Returns a formatted string representation of a number Stack", function () {
+      const s = new Stack<number>();
+
+      s.addItems(1, 2, 3, 4);
+
+      expect(s.toString()).to.equal("[ 1, 2, 3, 4 ]", "String not formatted correctly.");
+    });
+  });
 });

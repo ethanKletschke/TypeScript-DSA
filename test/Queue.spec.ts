@@ -95,7 +95,7 @@ describe("Queue", function () {
   });
 
   describe("toString()", function() {
-    it("Returns a correctly formatted string representation", function () {
+    it("Returns a correctly formatted string representation of a number Queue", function () {
       const q = new Queue<number>();
 
       q.add(1);
