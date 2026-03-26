@@ -1,8 +1,8 @@
 import { Collection, Stack } from "@/index";
 import { expect } from "chai";
 
-describe("Stack", function() {
-  describe("constructor()", function() {
+describe("Stack", function () {
+  describe("constructor()", function () {
     it("Creates an instance of the Stack class", function () {
       const s = new Stack();
       expect(s).to.be.an.instanceOf(Stack, "Did not instantiate a Stack.");
@@ -14,7 +14,7 @@ describe("Stack", function() {
     });
   });
 
-  describe("add()", function() {
+  describe("add()", function () {
     it("Pushes items to the top (end) of the stack", function () {
       const s = new Stack<number>();
 
@@ -39,6 +39,18 @@ describe("Stack", function() {
 
       // Assert that the length is equal to 3.
       expect(s.length).to.equal(3, "Incorrect length returned.");
+    });
+
+    describe("remove()", function () {
+      it("Removes the last item from the stack", function () {
+        const s = new Stack<number>();
+
+        s.addItems(1, 2, 3, 4);
+
+        const res = s.remove();
+        expect(s.peek()).to.equal(3, "Last item in the stack wasn't removed.");
+        expect(res).to.equal(4, "Wrong item was removed from the stack.");
+      });
     });
   });
 });
