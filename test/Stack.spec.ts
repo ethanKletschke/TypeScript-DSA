@@ -27,6 +27,16 @@ describe("Stack", function () {
     });
   });
 
+  describe("peek()", function () {
+    it("Returns the topmost element of the stack", function () {
+      const s = new Stack<string>();
+
+      s.add("Hi");
+
+      expect(s.peek()).to.equal("Hi", "Peek() failed");
+    });
+  });
+
   describe("addItems()", function () {
     it("Adds multiple items to a stack", function () {
       const s = new Stack<number>();
