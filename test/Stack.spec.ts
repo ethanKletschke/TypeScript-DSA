@@ -13,4 +13,19 @@ describe("Stack", function() {
       expect(s).to.be.an.instanceOf(Collection, "Did not inherit from Collection.");
     });
   });
+
+  describe("get length()", function() {
+    it("Returns the correct length of the stack", function () {
+      // Initialise a stack object
+      const s = new Stack<number>();
+
+      // Push items to the stack
+      s.add(10);
+      s.add(20);
+      s.add(30);
+
+      // Assert that the length is equal to 3.
+      expect(s.length).to.equal(3, "Incorrect length returned");
+    });
+  });
 });
