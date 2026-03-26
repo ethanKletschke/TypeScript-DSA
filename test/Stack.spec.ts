@@ -27,7 +27,7 @@ describe("Stack", function () {
     });
   });
 
-  describe("get length()", function() {
+  describe("get length()", function () {
     it("Returns the correct length of the stack", function () {
       // Initialise a stack object
       const s = new Stack<number>();
@@ -41,16 +41,26 @@ describe("Stack", function () {
       expect(s.length).to.equal(3, "Incorrect length returned.");
     });
 
-    describe("remove()", function () {
-      it("Removes the last item from the stack", function () {
-        const s = new Stack<number>();
+  });
 
-        s.addItems(1, 2, 3, 4);
+  describe("remove()", function () {
+    it("Removes the last item from the stack", function () {
+      const s = new Stack<number>();
 
-        const res = s.remove();
-        expect(s.peek()).to.equal(3, "Last item in the stack wasn't removed.");
-        expect(res).to.equal(4, "Wrong item was removed from the stack.");
-      });
+      s.addItems(1, 2, 3, 4);
+
+      s.remove();
+
+      expect(s.peek()).to.equal(3, "Last item in the stack wasn't removed.");
+    });
+
+    it("Returns the removed item", function () {
+      const s = new Stack<number>();
+
+      s.addItems(1, 2, 3, 4);
+
+      const res = s.remove();
+      expect(res).to.equal(4, "Wrong item was removed from the stack.");
     });
   });
 });
