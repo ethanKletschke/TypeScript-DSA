@@ -1,10 +1,10 @@
-import Collection from "./Collection";
+import { Collection } from "./Collection";
 
 /**
  * A last in first out (LIFO) data stucture where
  * items are both added and removed from the top.
  */
-export default class Stack<T> extends Collection<T> {
+export class Stack<T> extends Collection<T> {
   private items: T[];
 
   constructor() {

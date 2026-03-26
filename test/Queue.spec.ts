@@ -1,4 +1,4 @@
-import { Collection, Queue } from "@/data-structs";
+import { Collection, Queue } from "@/index";
 import { expect } from "chai";
 
 describe("Queue", function () {

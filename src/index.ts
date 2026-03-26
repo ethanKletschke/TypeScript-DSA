@@ -1,7 +1,4 @@
-import { Stack, Queue, Collection } from "./data-structs/index";
+import * as DataStructs from "./data-structs/index";
 
-export {
-  Collection,
-  Stack,
-  Queue
-};
+export { DataStructs };
+export * from "./data-structs";

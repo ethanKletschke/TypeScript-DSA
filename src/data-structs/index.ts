@@ -1,9 +1,3 @@
-import Collection from "./Collection";
-import Queue from "./Queue";
-import Stack from "./Stack";
-
-export {
-  Collection,
-  Stack,
-  Queue
-};
+export { Stack } from "./Stack";
+export { Collection } from "./Collection";
+export { Queue } from "./Queue";

@@ -1,4 +1,4 @@
-import { Collection, Stack } from "@/data-structs";
+import { Collection, Stack } from "@/index";
 import { expect } from "chai";
 
 describe("Stack", function() {
