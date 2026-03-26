@@ -14,6 +14,19 @@ describe("Stack", function() {
     });
   });
 
+  describe("add()", function() {
+    it("Pushes items to the top (end) of the stack", function () {
+      const s = new Stack<number>();
+
+      s.add(10);
+      s.add(20);
+      s.add(30);
+
+      expect(s.peek()).to.equal(30, "Top of stack isn't equal to the last item added.");
+      expect(s.length).to.equal(3, "Not all items were added.");
+    });
+  });
+
   describe("get length()", function() {
     it("Returns the correct length of the stack", function () {
       // Initialise a stack object
@@ -25,7 +38,7 @@ describe("Stack", function() {
       s.add(30);
 
       // Assert that the length is equal to 3.
-      expect(s.length).to.equal(3, "Incorrect length returned");
+      expect(s.length).to.equal(3, "Incorrect length returned.");
     });
   });
 });
