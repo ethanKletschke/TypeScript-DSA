@@ -27,6 +27,17 @@ describe("Stack", function () {
     });
   });
 
+  describe("addItems()", function () {
+    it("Adds multiple items to a stack", function () {
+      const s = new Stack<number>();
+
+      s.addItems(1, 2, 3, 4);
+
+      expect(s.length).to.equal(4, "Did not add all items.");
+      expect(s.peek()).to.equal(4, "Did not add the last item");
+    });
+  });
+
   describe("get length()", function () {
     it("Returns the correct length of the stack", function () {
       // Initialise a stack object
