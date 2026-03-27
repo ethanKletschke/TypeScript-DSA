@@ -41,17 +41,16 @@ export class Queue<T> extends Collection<T> {
   override toString(): string {
     let str: string = "[ ";
 
-    // TODO -> Account for string queues
     for (const item of this.items) {
       // If the loop reached the last item
       if (item === this.items[this.items.length - 1]) {
         // Do not append a comma and a space
-        str += `${item}`;
+        str += typeof item === "number" ? `${item}` : `"${item}"`;
         // End the loop
         break;
       }
 
-      str += `${item}, `;
+      str += typeof item === "number" ? `${item}, ` : `"${item}", `;
     }
 
     // Close square bracket
