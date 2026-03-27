@@ -39,7 +39,6 @@ export class Stack<T> extends Collection<T> {
     return this.items[this.items.length - 1];
   }
 
-  // TODO -> Account for string stacks
   override toString(): string {
     let str: string = "[ ";
 
@@ -47,12 +46,12 @@ export class Stack<T> extends Collection<T> {
       // If the loop reached the last item
       if (item === this.items[this.items.length - 1]) {
         // Do not append a comma and a space
-        str += `${item}`;
+        str += typeof item == "number" ? `${item}` : `"${item}"`;
         // End the loop
         break;
       }
 
-      str += `${item}, `;
+      str += typeof item == "number" ? `${item}, ` : `"${item}", `;
     }
 
     // Close square bracket
