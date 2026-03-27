@@ -105,5 +105,14 @@ describe("Queue", function () {
 
       expect(q.toString()).to.equal("[ 1, 2, 3, 4 ]", "toString() output not correctly formatted");
     });
+
+    it("Returns a correctly formatted string representation of a string Queue", function () {
+      const q = new Queue<string>();
+
+      q.addItems("Hello", "There", "My", "Friends");
+
+      const expected = `[ "Hello", "There", "My", "Friends" ]`;
+      expect(q.toString()).to.equal(expected, "toString() output not formatted correctly for strings");
+    });
   });
 });
