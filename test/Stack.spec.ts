@@ -33,7 +33,7 @@ describe("Stack", function () {
 
       s.add("Hi");
 
-      expect(s.peek()).to.equal("Hi", "Peek() failed");
+      expect(s.peek()).to.equal("Hi");
     });
   });
 
