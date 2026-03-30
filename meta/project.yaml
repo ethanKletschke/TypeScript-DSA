@@ -10,7 +10,7 @@ project-meta:
   package-manager: npm
   status: Experimental
   license: MIT
-  version: 0.0.7 # TODO -> Update version number
+  version: 0.1.0 # TODO -> Update version number
 
 build:
   dev-environments:
@@ -31,3 +31,4 @@ team:
     - name: Ethan Kletschke
       role: Author and Owner
       github-username: ethanKletschke
+      website: https://ethankletschke.netlify.app
