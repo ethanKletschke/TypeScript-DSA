@@ -21,7 +21,7 @@ function partition<T extends Comparable>(
   return i + 1;
 }
 
-export function quicksort<T extends Comparable>(arr: T[], low = 0, high: number | null = null): void {
+export function quicksort<T extends Comparable>(arr: T[], low = 0, high: number | null = null) {
   if (high === null) {
     high = arr.length - 1;
   }
@@ -32,4 +32,6 @@ export function quicksort<T extends Comparable>(arr: T[], low = 0, high: number 
     quicksort(arr, low, pivotIndex - 1);
     quicksort(arr, pivotIndex + 1, high);
   }
+
+  return arr;
 }
