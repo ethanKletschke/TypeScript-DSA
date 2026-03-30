@@ -1,6 +1,7 @@
 # TS-DSA
 
-A TypeScript DSA library.
+A simple TypeScript DSA library written as a skills reference and for learning
+OOP and DSA.
 
 [![Mocha Testing](https://github.com/ethanKletschke/TypeScript-DSA/actions/workflows/MochaTesting.yml/badge.svg)](https://github.com/ethanKletschke/TypeScript-DSA/actions/workflows/MochaTesting.yml)
 
@@ -13,9 +14,17 @@ A TypeScript DSA library.
 ---
 
 - [TS-DSA](#ts-dsa)
+  - [Current Features](#current-features)
   - [Planned Features](#planned-features)
 
 ---
+
+## Current Features
+
+- Generic data structure classes for stacks and queues
+- Simple bubble sort
+- A generic abstract `Collection` class that the Stack and Queue
+  classes inherit from
 
 ## Planned Features
 
