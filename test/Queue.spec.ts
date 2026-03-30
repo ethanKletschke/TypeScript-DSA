@@ -1,6 +1,7 @@
 import { Collection, Queue } from "@/index";
 import { expect } from "chai";
 
+
 describe("Queue", function () {
   describe("constructor()", function () {
     it("Creates an instance of the Queue class", function () {
@@ -16,7 +17,7 @@ describe("Queue", function () {
     });
   });
 
-  describe("get length()", function() {
+  describe("get length()", function () {
     it("Returns the length of the queue", function () {
       const q = new Queue<string>();
 
@@ -40,7 +41,7 @@ describe("Queue", function () {
     });
   });
 
-  describe("isEmpty()", function() {
+  describe("isEmpty()", function () {
     it("Correctly determines if the queue is empty", function () {
       const fullQ = new Queue<string>();
       const emptyQ = new Queue();
@@ -52,7 +53,7 @@ describe("Queue", function () {
     });
   });
 
-  describe("peek()", function() {
+  describe("peek()", function () {
     it("Returns the first item added.", function () {
       const q = new Queue<number>();
 
@@ -62,7 +63,7 @@ describe("Queue", function () {
     });
   });
 
-  describe("remove()", function() {
+  describe("remove()", function () {
     it("Removes from the front of the queue", function () {
       const q = new Queue<number>();
 
@@ -77,7 +78,7 @@ describe("Queue", function () {
     });
   });
 
-  describe("clear()", function() {
+  describe("clear()", function () {
     it("Fully clears the queue", function () {
       const q = new Queue<number>();
 
@@ -94,7 +95,7 @@ describe("Queue", function () {
     });
   });
 
-  describe("toString()", function() {
+  describe("toString()", function () {
     it("Returns a correctly formatted string representation of a number Queue", function () {
       const q = new Queue<number>();
 
