@@ -1,16 +1,16 @@
-export type Entry<K, V> = { key: K; value: V };
+export type Entry<V> = { key: string; value: V };
 
 export class HashTable<V> {
-  private items: Entry<string, V>[][] = [];
+  private buckets: Entry<V>[][] = [];
 
   constructor(len: number = 101) {
     for (let i = 0; i < len; i++) {
-      this.items.push([]);
+      this.buckets.push([]);
     }
   }
 
   get size() {
-    return this.items.length;
+    return this.buckets.length;
   }
 
   /**
