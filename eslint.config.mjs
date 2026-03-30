@@ -20,6 +20,7 @@ export default [
     files: ["**/*.spec.ts"],
     rules: {
       "@typescript-eslint/no-unused-expressions": "off",
+      "@typescript-eslint/no-require-imports": "off"
     }
   }
 ];
