@@ -1,7 +1,5 @@
 /**
  * Implements bubble sort for strings, numbers, and bigints.
- *
- * @remarks
  */
 export function bubbleSort<T extends string | number | bigint>(arr: T[]): T[] {
   // Copy the original array to avoid modifying the
