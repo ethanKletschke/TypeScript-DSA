@@ -31,4 +31,15 @@ export class HashTable<V> {
 
     return Math.abs(hash) % this.size;
   }
+
+  public add(newKey: string, newValue: V): void {
+    // Find the index for the bucket via the hash function.
+    const index = this.hashFunc(newKey);
+
+    // Create a new Entry item to push to the bucket
+    const newItem: Entry<V> = { key: newKey, value: newValue };
+
+    // Push the new item to the bucket.
+    this.buckets[index].push(newItem);
+  }
 }
