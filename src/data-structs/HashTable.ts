@@ -51,4 +51,15 @@ export class HashTable<V> {
     // if it's not found.
     return this.buckets[index].find(item => item.key === key);
   }
+
+  public update(key: string, newValue: V): void {
+    // Generate the hash of the key provided.
+    const index = this.hashFunc(key);
+
+    // Find the item with the specified key in the bucket.
+    const item = this.buckets[index].find(item => item.key === key);
+
+    // If the item exists in the bucket, update its value
+    if (item) item.value = newValue;
+  }
 }
