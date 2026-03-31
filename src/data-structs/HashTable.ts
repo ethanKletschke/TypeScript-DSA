@@ -42,4 +42,13 @@ export class HashTable<V> {
     // Push the new item to the bucket.
     this.buckets[index].push(newItem);
   }
+
+  public get(key: string): Entry<V> | undefined {
+    // Find the hash of the key provided.
+    const index = this.hashFunc(key);
+
+    // Return the item in the specified bucket or undefined
+    // if it's not found.
+    return this.buckets[index].find(item => item.key === key);
+  }
 }
