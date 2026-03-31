@@ -8,9 +8,9 @@ project-meta:
     - Mocha
     - Chai
   package-manager: npm
-  status: Experimental
+  status: Stable
   license: MIT
-  version: 0.2.0 # TODO -> Update version number
+  version: 0.3.0 # TODO -> Update version number
 
 build:
   dev-environments:
