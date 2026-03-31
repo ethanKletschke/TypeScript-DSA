@@ -32,17 +32,6 @@ export class HashTable<V> {
     return Math.abs(hash) % this.size;
   }
 
-  public add(newKey: string, newValue: V): void {
-    // Find the index for the bucket via the hash function.
-    const index = this.hashFunc(newKey);
-
-    // Create a new Entry item to push to the bucket
-    const newItem: Entry<V> = { key: newKey, value: newValue };
-
-    // Push the new item to the bucket.
-    this.buckets[index].push(newItem);
-  }
-
   public get(key: string): Entry<V> | undefined {
     // Find the hash of the key provided.
     const index = this.hashFunc(key);
@@ -52,14 +41,23 @@ export class HashTable<V> {
     return this.buckets[index].find(item => item.key === key);
   }
 
-  public update(key: string, newValue: V): void {
-    // Generate the hash of the key provided.
+  /**
+   * Sets or adds a new item.
+   *
+   * @remarks
+   * This method either adds a new item or sets
+   * the value of an existing item.
+   */
+  public set(key: string, newValue: V): void {
     const index = this.hashFunc(key);
+    const bucket = this.buckets[index];
 
-    // Find the item with the specified key in the bucket.
-    const item = this.buckets[index].find(item => item.key === key);
+    const existingItem = bucket.find(item => item.key === key);
 
-    // If the item exists in the bucket, update its value
-    if (item) item.value = newValue;
+    if (existingItem) {
+      existingItem.value = newValue;
+    } else {
+      bucket.push({ key: key, value: newValue });
+    }
   }
 }

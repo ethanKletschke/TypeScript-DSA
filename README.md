@@ -25,6 +25,7 @@ OOP and DSA.
 - Simple bubble sort
 - A generic abstract `Collection` class that the Stack and Queue
   classes inherit from
+- A string `HashMap` class
 
 ## Planned Features
 
