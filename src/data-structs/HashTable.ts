@@ -1,5 +1,13 @@
 export type Entry<V> = { key: string; value: V };
 
+/**
+ * A data structure that stores key-value pairs in
+ * an array of buckets.
+ *
+ * @remarks
+ * The key type is limited to `string`, but the
+ * value is generic (typed as `V`).
+ */
 export class HashTable<V> {
   private buckets: Entry<V>[][] = [];
   private _count: number = 0;
