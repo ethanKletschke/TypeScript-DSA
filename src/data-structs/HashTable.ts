@@ -12,24 +12,23 @@ export class HashTable<V> {
   private buckets: Entry<V>[][] = [];
   private _count: number = 0;
 
-
   constructor(len: number = 101) {
     for (let i = 0; i < len; i++) {
       this.buckets.push([]);
     }
   }
 
-  private get loadFactor() {
+  private get loadFactor(): number {
     return this.count / this.buckets.length;
   }
 
   // The number of items in all the buckets
-  get count() {
+  get count(): number {
     return this._count;
   }
 
   // The number of buckets
-  get size() {
+  get size(): number {
     return this.buckets.length;
   }
 
