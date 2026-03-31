@@ -2,15 +2,22 @@ export type Entry<V> = { key: string; value: V };
 
 export class HashTable<V> {
   private buckets: Entry<V>[][] = [];
+  private _count: number = 0;
+
+  private get loadFactor() {
+    return this.count / this.buckets.length;
+  }
 
   constructor(len: number = 101) {
     for (let i = 0; i < len; i++) {
       this.buckets.push([]);
     }
+
+    this._count = 0;
   }
 
-  get size() {
-    return this.buckets.length;
+  get count() {
+    return this._count;
   }
 
   /**
@@ -29,7 +36,7 @@ export class HashTable<V> {
       hash = (hash * 33) ^ key.charCodeAt(i);
     }
 
-    return Math.abs(hash) % this.size;
+    return Math.abs(hash) % this.buckets.length;
   }
 
   public get(key: string): Entry<V> | undefined {
@@ -58,6 +65,7 @@ export class HashTable<V> {
       existingItem.value = newValue;
     } else {
       bucket.push({ key: key, value: newValue });
+      this._count++;
     }
   }
 }
