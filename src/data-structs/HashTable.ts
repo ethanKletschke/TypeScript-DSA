@@ -12,12 +12,16 @@ export class HashTable<V> {
     for (let i = 0; i < len; i++) {
       this.buckets.push([]);
     }
-
-    this._count = 0;
   }
 
+  // The number of items in all the buckets
   get count() {
     return this._count;
+  }
+
+  // The number of buckets
+  get size() {
+    return this.buckets.length;
   }
 
   /**
@@ -36,7 +40,7 @@ export class HashTable<V> {
       hash = (hash * 33) ^ key.charCodeAt(i);
     }
 
-    return Math.abs(hash) % this.buckets.length;
+    return Math.abs(hash) % this.size;
   }
 
   public get(key: string): Entry<V> | undefined {
@@ -63,9 +67,42 @@ export class HashTable<V> {
 
     if (existingItem) {
       existingItem.value = newValue;
-    } else {
-      bucket.push({ key: key, value: newValue });
-      this._count++;
+      return;
+    }
+
+    bucket.push({ key: key, value: newValue });
+    this._count++;
+
+    if (this.loadFactor > 0.7) {
+      this.resize();
+    }
+  }
+
+  /**
+   * Resizes and rehashes the Hash Table.
+   *
+   * @remarks
+   * Called automatically in the `set()` method if the
+   * `loadFactor` is above 0.7.
+   */
+  private resize(): void {
+    // Store the current buckets.
+    const oldBuckets = this.buckets;
+
+    // Double the capacity.
+    const newCapacity = oldBuckets.length * 2;
+
+    // Reinitialise the buckets.
+    this.buckets = Array.from({ length: newCapacity }, () => []);
+
+    // Reset size
+    this._count = 0;
+
+    // Rehash all entries
+    for (const oldBucket of oldBuckets) {
+      for (const entry of oldBucket) {
+        this.set(entry.key, entry.value);
+      }
     }
   }
 }
