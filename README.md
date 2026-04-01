@@ -23,6 +23,7 @@ OOP and DSA.
 
 - Generic data structure classes for stacks and queues
 - Simple bubble sort
+- Quick Sort
 - A generic abstract `Collection` class that the Stack and Queue
   classes inherit from
 - A string `HashTable` class
