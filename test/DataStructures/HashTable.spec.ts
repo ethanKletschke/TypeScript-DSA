@@ -74,4 +74,15 @@ describe("HashTable", function () {
       expect(hash).to.be.at.least(0);
     });
   });
+
+  describe("get()", function () {
+    it("Returns an existing member", function () {
+      const ht = new HashTable<number>();
+
+      ht.set("I Exist", 123);
+
+      expect(ht.get("I Exist")).to.not.be.undefined;
+      expect(ht.get("I Exist")!.value).to.equal(123);
+    });
+  });
 });
