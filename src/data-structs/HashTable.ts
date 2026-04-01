@@ -33,7 +33,7 @@ export class HashTable<V> {
   }
 
   /**
-   * Defines which key to put a value under
+   * Defines which bucket to put a value under.
    *
    * @remarks
    * Implemented using the DJB2 algorithm
