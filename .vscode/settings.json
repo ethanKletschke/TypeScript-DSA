@@ -1,0 +1,61 @@
+{
+  "commentAnchors.workspace.excludeFiles": "**/{node_modules,.git,.idea,target,out,build,bin,obj,dist,vendor,jsdoc,.angular,.venv}/**/*",
+  "commentAnchors.tags.matchPrefix": [
+    "<!--",
+    "//",
+    "/*",
+    "/**",
+    "#",
+    "{/*",
+    "*>",
+    "(*"
+  ],
+  "commentAnchors.tags.matchSuffix": [
+    "-->",
+    "*/",
+    "*/}",
+    "*)"
+  ],
+  "commentAnchors.workspace.lazyLoad": false,
+  "commentAnchors.tags.endTag": "END_",
+  "commentAnchors.tags.displayTagName": true,
+  "commentAnchors.tags.separators": [
+    " ",
+    " - ",
+    " -> ",
+    " ->",
+    " => ",
+    " =>",
+    "-> ",
+    "->",
+    ": ",
+    "=> ",
+    "=>",
+  ],
+  "commentAnchors.tags.anchors": {
+    "REMEMBER": {
+      "scope": "workspace",
+      "behavior": "anchor",
+      "iconColor": "#ffbb33",
+      "highlightColor": "#ffbb33"
+    },
+    "WIP": {
+      "behavior": "anchor",
+      "highlightColor": "#7272ef",
+      "iconColor": "#7272ef",
+      "scope": "workspace"
+    },
+    "TODO": {
+      "behavior": "anchor",
+      "highlightColor": "#d40033",
+      "iconColor": "#d40033",
+      "scope": "workspace",
+    },
+    "NB": {
+      "behavior": "anchor",
+      "highlightColor": "#f03ff3",
+      "iconColor": "#f03ff3",
+      "scope": "workspace",
+    }
+  },
+}
