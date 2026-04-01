@@ -10,7 +10,7 @@ project-meta:
   package-manager: npm
   status: Stable
   license: MIT
-  version: 0.3.0 # TODO -> Update version number
+  version: 0.4.0 # TODO -> Update version number
 
 build:
   dev-environments:
