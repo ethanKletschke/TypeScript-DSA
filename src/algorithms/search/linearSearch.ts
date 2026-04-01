@@ -4,10 +4,18 @@
  *
  * @param arr - The array to search.
  * @param val - The value to search for.
- * @returns The index of `val` in `arr`.
+ * @returns The index of `val` in `arr`, or `-1` if not found
  *
  * @experimental
  */
 export function linearSearch<T>(arr: T[], val: T): number {
-  return -1;
+  let index = -1;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === val) {
+      index = i;
+    }
+  }
+
+  return index;
 }
