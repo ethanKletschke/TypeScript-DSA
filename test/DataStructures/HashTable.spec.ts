@@ -84,5 +84,21 @@ describe("HashTable", function () {
       expect(ht.get("I Exist")).to.not.be.undefined;
       expect(ht.get("I Exist")!.value).to.equal(123);
     });
+
+    it("Returns undefined for a non-existant member", function () {
+      const presidents = new HashTable<number>();
+      expect(presidents.get("Franklin D. Roosevelt")).to.be.undefined;
+    });
+  });
+
+  describe("set()", function () {
+    it("Creates a new member", function () {
+      const ht = new HashTable<number>(101);
+      expect(ht.get("Ethan")).to.be.undefined;
+
+      ht.set("Ethan", 100);
+      expect(ht.get("Ethan")).to.not.be.undefined;
+      expect(ht.get("Ethan")!.value).to.equal(100);
+    });
   });
 });
