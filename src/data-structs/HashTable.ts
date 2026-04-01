@@ -51,13 +51,13 @@ export class HashTable<V> {
     return Math.abs(hash) % this.size;
   }
 
-  public get(key: string): Entry<V> | undefined {
+  public get(key: string): V | undefined {
     // Find the hash of the key provided.
     const index = this.hashFunc(key);
 
     // Return the item in the specified bucket or undefined
     // if it's not found.
-    return this.buckets[index].find(item => item.key === key);
+    return this.buckets[index].find(item => item.key === key)?.value;
   }
 
   /**
