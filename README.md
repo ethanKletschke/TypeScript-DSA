@@ -15,18 +15,31 @@ OOP and DSA.
 
 - [TS-DSA](#ts-dsa)
   - [Current Features](#current-features)
+    - [Data Structures](#data-structures)
+    - [Algorithms](#algorithms)
   - [Planned Features](#planned-features)
 
 ---
 
 ## Current Features
 
-- Generic data structure classes for stacks and queues
-- Simple bubble sort
-- Quick Sort
-- A generic abstract `Collection` class that the Stack and Queue
-  classes inherit from
-- A string `HashTable` class
+### Data Structures
+
+1. Queue (Generic)
+2. Stack (Generic)
+3. Collection (Generic Abstract class)
+4. String-key Hash Table
+
+### Algorithms
+
+Sorting Algorithms:
+
+1. Bubble Sort
+2. Quick Sort
+
+Sorting Algorithms:
+
+1. Linear Search
 
 ## Planned Features
 
