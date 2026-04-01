@@ -43,4 +43,35 @@ describe("HashTable", function () {
       expect(ht2.size).to.equal(101);
     });
   });
+
+  describe("hashFunc()", function () {
+    it("Generates the same hash for the same input", function () {
+      const key = "Hello";
+
+      const hash1 = new HashTable().hashFunc(key);
+      const hash2 = new HashTable().hashFunc(key);
+
+      expect(hash1).to.equal(hash2);
+    });
+
+    it("Generates different hashes for similar keys", function () {
+      const h1 = new HashTable().hashFunc("abc");
+      const h2 = new HashTable().hashFunc("abd");
+
+      expect(h1).to.not.equal(h2);
+    });
+
+    it("Is sensitive to character order", function () {
+      const h1 = new HashTable().hashFunc("abc");
+      const h2 = new HashTable().hashFunc("cba");
+
+      expect(h1).to.not.equal(h2);
+    });
+
+    it("Doesn't give a negative hash", function () {
+      const hash = new HashTable().hashFunc("test");
+
+      expect(hash).to.be.at.least(0);
+    });
+  });
 });
