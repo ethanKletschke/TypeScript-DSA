@@ -100,5 +100,26 @@ describe("HashTable", function () {
       expect(ht.get("Ethan")).to.not.be.undefined;
       expect(ht.get("Ethan")).to.equal(100);
     });
+
+    it("Sets the value of an existing member", function () {
+      const ht = new HashTable<number>();
+      ht.set("Ethan", 100);
+      expect(ht.get("Ethan")).to.equal(100);
+
+      ht.set("Ethan", 2);
+      expect(ht.get("Ethan")).to.equal(2);
+    });
+
+    it("Retains all entries after resizing", function () {
+      const ht = new HashTable<number>(2); // Really small size triggers resize quickly
+
+      ht.set("a", 1);
+      ht.set("b", 2);
+      ht.set("c", 3); // Triggers resize
+
+      expect(ht.get("a")).to.equal(1);
+      expect(ht.get("b")).to.equal(2);
+      expect(ht.get("c")).to.equal(3);
+    });
   });
 });
