@@ -82,7 +82,7 @@ describe("HashTable", function () {
       ht.set("I Exist", 123);
 
       expect(ht.get("I Exist")).to.not.be.undefined;
-      expect(ht.get("I Exist")!.value).to.equal(123);
+      expect(ht.get("I Exist")).to.equal(123);
     });
 
     it("Returns undefined for a non-existant member", function () {
@@ -98,7 +98,7 @@ describe("HashTable", function () {
 
       ht.set("Ethan", 100);
       expect(ht.get("Ethan")).to.not.be.undefined;
-      expect(ht.get("Ethan")!.value).to.equal(100);
+      expect(ht.get("Ethan")).to.equal(100);
     });
   });
 });
