@@ -5,8 +5,6 @@
  * @param arr - The array to search.
  * @param val - The value to search for.
  * @returns The index of `val` in `arr`, or `-1` if not found
- *
- * @experimental
  */
 export function linearSearch<T>(arr: T[], val: T): number {
   let index = -1;
