@@ -121,5 +121,25 @@ describe("HashTable", function () {
       expect(ht.get("b")).to.equal(2);
       expect(ht.get("c")).to.equal(3);
     });
+
+    it("Doubles the size of the Hash Table on resize", function () {
+      const ht = new HashTable<number>(2);
+
+      ht.set("a", 1);
+      ht.set("b", 2);
+      ht.set("c", 3); // Triggers resize
+
+      expect(ht.size).to.be.greaterThan(2);
+    });
+
+    it("Maintains the correct count after resizing", function () {
+      const ht = new HashTable<number>(2);
+
+      ht.set("a", 1);
+      ht.set("b", 2);
+      ht.set("c", 3); // Triggers resize
+
+      expect(ht.count).to.equal(3);
+    });
   });
 });
