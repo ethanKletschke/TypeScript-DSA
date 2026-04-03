@@ -2,7 +2,7 @@
  * A node for a tree data structure.
  *
  * @typeParam T - the data type of the node's data
- * @beta
+ * @experimental
  */
 export class TreeNode<T> {
   /** The node's data */
