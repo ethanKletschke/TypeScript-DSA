@@ -13,10 +13,8 @@
     "rewriteRelativeImportExtensions": true,
     "rootDir": "./",
     "types": ["node", "mocha", "chai"],
-    "moduleResolution": "node",
-    "baseUrl": "./",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["./src/*"]
     }
   }
 }
