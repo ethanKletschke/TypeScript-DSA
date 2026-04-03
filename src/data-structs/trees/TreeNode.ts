@@ -5,8 +5,11 @@
  * @beta
  */
 export class TreeNode<T> {
+  /** The node's data */
   private _data: T | undefined;
+  /** The node to the left of the current node */
   private _left: TreeNode<T> | null = null;
+  /** The node to the right of the current node */
   private _right: TreeNode<T> | null = null;
 
 
