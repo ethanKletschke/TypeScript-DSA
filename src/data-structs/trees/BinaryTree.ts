@@ -37,4 +37,14 @@ export class BinaryTree<T> {
       }
     }
   }
+
+  inOrder(node: TreeNode<T> | null = this.root): T[] {
+    if (!node) return [];
+
+    return [
+      ...this.inOrder(node.leftNode),
+      node.data,
+      ...this.inOrder(node.rightNode)
+    ];
+  }
 }
