@@ -6,7 +6,7 @@
  */
 export class TreeNode<T> {
   /** The node's data */
-  private _data: T | undefined;
+  private _data: T;
   /** The node to the left of the current node */
   private _left: TreeNode<T> | null = null;
   /** The node to the right of the current node */
@@ -18,7 +18,7 @@ export class TreeNode<T> {
    *
    * @param {?T} [data] - The data for the current node
    */
-  constructor(data?: T) {
+  constructor(data: T) {
     this._data = data;
   }
 
@@ -47,7 +47,7 @@ export class TreeNode<T> {
   /**
    * The data for the current tree node.
    */
-  get data(): T | undefined {
+  get data(): T {
     return this._data;
   }
 
