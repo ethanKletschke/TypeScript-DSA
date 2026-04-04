@@ -3,7 +3,9 @@ import { TreeNode } from "./TreeNode";
 /**
  * A basic binary tree.
  *
+ * @typeParam T - The data type of the data nodes.
  * @experimental
+ * @since v0.5.0
  */
 export class BinaryTree<T> {
   /**
@@ -54,6 +56,7 @@ export class BinaryTree<T> {
    * values.
    *
    * @param node - The root node to traverse from.
+   * @returns An array of the binary tree nodes' values
    */
   inOrder(node: TreeNode<T> | null = this.root): T[] {
     // This is the base test for the recursion.

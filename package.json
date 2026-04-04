@@ -8,8 +8,9 @@
   },
   "scripts": {
     "test": "mocha",
-    "lint":  "eslint .",
-    "syncJson": "npm i --package-lock-only"
+    "lint": "eslint .",
+    "syncJson": "npm i --package-lock-only",
+    "docs": "typedoc"
   },
   "author": "Ethan Kletschke",
   "license": "MIT",
@@ -27,6 +28,7 @@
     "mocha": "^11.7.5",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
+    "typedoc": "^0.28.18",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.57.2"
   }

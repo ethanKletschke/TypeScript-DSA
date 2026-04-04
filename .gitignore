@@ -1,6 +1,9 @@
+# Folders
 node_modules
 dist
+doc
 
+# VS Code config
 .vscode/*
 !.vscode/extensions.json
 !.vscode/settings.json

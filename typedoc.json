@@ -1,0 +1,14 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPoints": [
+    "src"
+  ],
+  "entryPointStrategy": "expand",
+  "out": "./doc/",
+  "tsconfig": "tsconfig.json",
+  "sort": [
+    "source-order"
+  ],
+  "readme": "README.md",
+  "name": "TS-DSA"
+}
