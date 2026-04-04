@@ -6,8 +6,18 @@ import { TreeNode } from "./TreeNode";
  * @experimental
  */
 export class BinaryTree<T> {
+  /**
+   * The root of the binary tree.
+   *
+   * @defaultValue `null`
+   */
   root: TreeNode<T> | null = null;
 
+  /**
+   * Inserts a new value to the binary tree.
+   *
+   * @param value - The value to insert.
+   */
   insert(value: T): void {
     const newNode = new TreeNode<T>(value);
 
@@ -38,12 +48,24 @@ export class BinaryTree<T> {
     }
   }
 
+  /**
+   * Performs in-order traversal on the Binary Tree,
+   * and returns the result as an array of the nodes'
+   * values.
+   *
+   * @param node - The root node to traverse from.
+   */
   inOrder(node: TreeNode<T> | null = this.root): T[] {
+    // This is the base test for the recursion.
+    // If the node doesn't exist, return an empty array.
     if (!node) return [];
 
     return [
+      // Recursively traverse the left tree
       ...this.inOrder(node.leftNode),
+      // Current node data
       node.data,
+      // Recursively traverse the right tree
       ...this.inOrder(node.rightNode)
     ];
   }
