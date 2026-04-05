@@ -1,7 +1,15 @@
+import type { Comparable } from "./Comparable";
 /**
  * Implements bubble sort for strings, numbers, and bigints.
+ *
+ * @typeParam T - The type of the array to sort.
+ * @param arr - The array to sort.
+ * @returns A sorted copy of `arr`.
+ *
+ * @author Ethan Kletschke
+ * @since v0.1.0
  */
-export function bubbleSort<T extends string | number | bigint>(arr: T[]): T[] {
+export function bubbleSort<T extends Comparable>(arr: T[]): T[] {
   // Copy the original array to avoid modifying the
   // original array
   const newArr = [...arr];
