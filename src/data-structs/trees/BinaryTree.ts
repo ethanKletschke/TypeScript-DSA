@@ -4,7 +4,8 @@ import { TreeNode } from "./TreeNode";
  * A basic binary tree.
  *
  * @typeParam T - The data type of the data nodes.
- * @experimental
+ *
+ * @author Ethan Kletschke
  * @since v0.5.0
  */
 export class BinaryTree<T> {

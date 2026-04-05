@@ -2,7 +2,9 @@
  * A node for a tree data structure.
  *
  * @typeParam T - the data type of the node's data
- * @experimental
+ *
+ * @author Ethan Kletschke
+ * @since 0.5.0
  */
 export class TreeNode<T> {
   /** The node's data */
@@ -16,7 +18,7 @@ export class TreeNode<T> {
   /**
    * The `constructor` method creates an instance of the `TreeNode` class.
    *
-   * @param {?T} [data] - The data for the current node
+   * @param data - The data for the current node
    */
   constructor(data: T) {
     this._data = data;

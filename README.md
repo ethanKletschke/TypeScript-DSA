@@ -29,6 +29,7 @@ OOP and DSA.
 2. Stack (Generic)
 3. Collection (Generic Abstract class)
 4. String-key Hash Table
+5. Binary Tree (Generic)
 
 ### Algorithms
 
