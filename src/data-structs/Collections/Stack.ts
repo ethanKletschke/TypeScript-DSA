@@ -1,4 +1,4 @@
-import { Collection } from "./Collections/Collection";
+import { Collection } from "./Collection";
 
 /**
  * A last in first out (LIFO) data stucture where
