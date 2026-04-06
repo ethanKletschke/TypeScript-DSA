@@ -6,7 +6,7 @@ OOP and DSA.
 [![Mocha Testing](https://github.com/ethanKletschke/TypeScript-DSA/actions/workflows/MochaTesting.yml/badge.svg)](https://github.com/ethanKletschke/TypeScript-DSA/actions/workflows/MochaTesting.yml)
 
 - Author: Ethan Kletschke
-- Version: `0.5.0` <!-- TODO => Update version number -->
+- Version: `0.5.1` <!-- TODO => Update version number -->
 - Developed on: Ubuntu (WSL2)
 - License: MIT
 - Project metadata: [`project.yaml`](meta/project.yaml)
